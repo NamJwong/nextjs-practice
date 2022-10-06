@@ -1,20 +1,12 @@
-import { AppProps } from "next/app";
+import { AppProps } from 'next/app';
 
-import NavBar from "../components/NavBar";
-import "../styles/globals.css";
+import Layout from '../components/Layout';
+import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <NavBar />
+    <Layout>
       <Component {...pageProps} />
-      <style jsx global>
-        {`
-          a {
-            color: #ffb7b7;
-          }
-        `}
-      </style>
-    </>
+    </Layout>
   );
 }
